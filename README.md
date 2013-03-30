@@ -15,9 +15,6 @@ To include the widget in a dashboard, add the following to your dashboard layout
 ##Settings
 
 +   Forecast API Key from [developer.forecast.io](https://developer.forecast.io)
-
 +   Latitude and Longitude for your desired location. Easily obtained from forward geocoding sites such as [geocoder.ca](http://geocoder.ca)
-
 +   Configurable temperature units. (US, SI, UK)
-
 +   Default schedule set to fetch weather every 5 minutes but can be changed from within forcast.rb.
