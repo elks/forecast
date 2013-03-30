@@ -1,6 +1,6 @@
 ## Description
 
-[Dashing](http://shopify.github.com/dashing) widget to display weather from [forecast.io](http://http://forecast.io).
+[Dashing](http://shopify.github.com/dashing) widget to display weather from [forecast.io](http://forecast.io).
 
 ##Usage
 
