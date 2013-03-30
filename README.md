@@ -20,4 +20,4 @@ Latitude and Longitude for your desired location. Easily obtained from forward g
 
 Configurable temperature units. (US, SI, UK)
 
-Default schdule set to fetch weather every 5 minutes but can be changed from within forcast.rb.
+Default schedule set to fetch weather every 5 minutes but can be changed from within forcast.rb.
