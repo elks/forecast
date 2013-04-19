@@ -3,6 +3,8 @@
 [Dashing](http://shopify.github.com/dashing) widget to display weather from [forecast.io](http://forecast.io).
 This widget was forked from <https://gist.github.com/mjamieson/5274790> to add Skycons and the forecast for later in the day.
 
+<img src="http://i.imgur.com/EZNs1y2.png" />
+
 ##Usage
 
 To use this widget, copy `forecast.coffee`, `forecast.html`, and `forecast.scss` into the `/widgets/forecast` directory. Put the `forecast.rb` file in your `/jobs` folder.
