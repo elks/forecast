@@ -21,6 +21,11 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
   response = http.request(Net::HTTP::Get.new("/forecast/#{forecast_api_key}/#{forecast_location_lat},#{forecast_location_long}?units=#{forecast_units}"))
   forecast = JSON.parse(response.body)  
   forecast_current_temp = forecast["currently"]["temperature"].round
-  forecast_hour_summary = forecast["minutely"]["summary"]
-  send_event('forecast', { temperature: "#{forecast_current_temp}&deg;", hour: "#{forecast_hour_summary}"})
+  forecast_current_icon = forecast["currently"]["icon"]
+  forecast_current_desc = forecast["currently"]["summary"]
+  forecast_next_desc    = forecast["minutely"]["summary"]
+  forecast_next_icon    = forecast["minutely"]["icon"]
+  forecast_later_desc   = forecast["hourly"]["summary"]
+  forecast_later_icon   = forecast["hourly"]["icon"]
+  send_event('seattle-forecast', { current_temp: "#{forecast_current_temp}&deg;", current_icon: "#{forecast_current_icon}", current_desc: "#{forecast_current_desc}", next_icon: "#{forecast_next_icon}", next_desc: "#{forecast_next_desc}", later_icon: "#{forecast_later_icon}", later_desc: "#{forecast_later_desc}"})
 end

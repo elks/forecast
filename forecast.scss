@@ -12,19 +12,31 @@ $light-color: rgba(255, 255, 255, 0.7);
 .widget-forecast {
 
   background-color: $background-color;
+  padding-top: 15px !important;
 
   .title {
     color: $light-color;
+    text-align: left;
+    font-size: 20px;
   }
 
   .temp {
     color: $full-color;
+    text-align: left;
+    font-size: 40px;
   }
 
   .summary {
-    color: $light-color;
+    color: $full-color;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 17px;
   }
-
+  .forecast-icon {
+    float: left;
+    text-align: left;
+    margin-right: 20px;
+  }
   .more-info {
       color: $light-color;
   }
