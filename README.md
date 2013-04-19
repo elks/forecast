@@ -3,6 +3,7 @@
 [Dashing](http://shopify.github.com/dashing) widget to display weather from [forecast.io](http://forecast.io).
 This widget was forked from <https://gist.github.com/mjamieson/5274790> to add Skycons and the forecast for later in the day.
 
+##Screenshot
 <img src="http://i.imgur.com/EZNs1y2.png" />
 
 ##Usage
