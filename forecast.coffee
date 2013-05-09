@@ -1,31 +1,38 @@
 class Dashing.Forecast extends Dashing.Widget
 
-  forecast_icons   = 
-  forecast_current = ""
-  forecast_next    = ""
-  forecast_later   = ""
+  # Overrides Dashing.Widget method in dashing.coffee
+  @accessor 'updatedAtMessage', ->
+    if updatedAt = @get('updatedAt')
+      timestamp = new Date(updatedAt * 1000)
+      hours = timestamp.getHours()
+      minutes = ("0" + timestamp.getMinutes()).slice(-2)
+      "Updated at #{hours}:#{minutes}"
+
+  constructor: ->
+    super
+    @forecast_icons = new Skycons({"color": "white"})
+    @forecast_icons.play()
 
   ready: ->
     # This is fired when the widget is done being rendered
     @setIcons()
-    forecast_icons.play()
-
 
   onData: (data) ->
     # Handle incoming data
-    forecast_current = @toSkycon('current_icon')
-    forecast_next    = @toSkycon('next_icon')
-    forecast_later   = @toSkycon('later_icon')
-
-    if forecast_icons
+    # We want to make sure the first time they're set is after ready()
+    # has been called, or the Skycons code will complain.
+    if @forecast_icons.list.length
       @setIcons()
-    else
-      forecast_icons = new Skycons({"color": "white"})
 
   setIcons: ->
-    forecast_icons.set("current_icon", eval(forecast_current))
-    forecast_icons.set("next_icon", eval(forecast_next))
-    forecast_icons.set("later_icon", eval(forecast_later))
+    @setIcon('current_icon')
+    @setIcon('next_icon')
+    @setIcon('later_icon')
+
+  setIcon: (name) ->
+    skycon = @toSkycon(name)
+    @forecast_icons.set(name, eval(skycon)) if skycon
 
   toSkycon: (data) ->
-    'Skycons.' + @get(data).replace(/-/g, "_").toUpperCase()
+    if @get(data)
+      'Skycons.' + @get(data).replace(/-/g, "_").toUpperCase()

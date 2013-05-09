@@ -15,7 +15,7 @@ Get skycons.js from <https://github.com/darkskyapp/skycons> and put it in your `
 To include the widget in a dashboard, add the following to your dashboard layout file:
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="forecast" data-view="Forecast" data-title="Weather Forecast" ></div>
+      <div data-id="forecast" data-view="Forecast" data-widget_title="<img src='http://forecast.io/favicon.ico' />Weather Forecast"> ></div>
     </li>
 
 ##Settings
