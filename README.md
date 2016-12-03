@@ -1,16 +1,18 @@
 ## Description
 
-[Smashing](https://github.com/SmashingDashboard/smashing) widget to display weather from [forecast.io](http://forecast.io).
-This widget was forked from <https://gist.github.com/toddq/5422352>.
+[Smashing](https://github.com/SmashingDashboard/smashing) widget to display weather from [forecast.io](http://forecast.io). This widget was forked from <https://gist.github.com/toddq/5422352>.
 
 ##Screenshot
 <img src="http://i.imgur.com/yrRcQLZ.png" />
 
 ##Usage
 
-To use this widget, copy `forecast.coffee`, `forecast.html`, and `forecast.scss` into the `/widgets/forecast` directory. Put the `forecast.rb` file in your `/jobs` folder.
+To use this widget: 
 
-Copy skycons.js from <https://github.com/darkskyapp/skycons> into your `assets/javascripts` directory.
+1. Copy `forecast.coffee`, `forecast.html`, and `forecast.scss` into your `/widgets/forecast` directory.
+2. Copy `forecast.rb` into your `/jobs` folder.
+3. Copy `skycons.js` from <https://github.com/darkskyapp/skycons> into your `assets/javascripts` directory.
+4. Add your forecast.io API key to `forecast.rb`
 
 To include the widget in a dashboard, add the following to your dashboard layout file:
 
