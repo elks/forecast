@@ -28,7 +28,6 @@ $light-color: rgba(255, 255, 255, 0.7);
 .widget-forecast {
 
   background-color: $background-color;
-  padding-top: 15px !important;
 
   h1 {
     margin-bottom: 0px;
@@ -36,9 +35,7 @@ $light-color: rgba(255, 255, 255, 0.7);
 
   .updated-at {
     color: rgba(0, 0, 0, 0.3);
-    top: 5px;
-    right: 10px;
-    left: auto;
+	margin: 5px auto;
   }
 
   .title {
